@@ -30,36 +30,4 @@ This project demonstrates **Object-Oriented Programming (OOP)** concepts, contro
 
 ---
 
-## 📊 UML Class Diagram
 
-```mermaid
-classDiagram
-    class Account {
-        - int accountNumber
-        - String accountHolderName
-        - double balance
-        - String email
-        - String phoneNumber
-        + Account(int, String, double, String, String)
-        + deposit(double)
-        + withdraw(double)
-        + displayAccountDetails()
-        + updateContactDetails(String, String)
-        + getAccountNumber() int
-    }
-
-    class UserInterface {
-        - Account[] accounts
-        - int accountCount
-        - Scanner scanner
-        + UserInterface()
-        + createAccount()
-        + performDeposit()
-        + performWithdrawal()
-        + showAccountDetails()
-        + updateContact()
-        + mainMenu()
-        + main(String[]) static
-    }
-
-    UserInterface "1" --> "*" Account
